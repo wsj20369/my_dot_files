@@ -1,0 +1,16 @@
+* File Header
+#+STARTUP: overview
+#+STARTUP: indent
+#+STARTUP: logdone
+#+TAGS: works(w) personal(p) study(s) school(o)
+#+TODO: TODO(t) WAITING(w) PENDING(p) | DONE(d) CANCELED(c)
+#+TITLE: GTD lists
+
+* Inbox
+* Clarify
+* Next Action
+* Waiting for
+* Project
+* Someday/Maybe
+* Reference
+* Trash
