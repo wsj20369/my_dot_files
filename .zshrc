@@ -1,8 +1,8 @@
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/shujun/.oh-my-zsh"
+export ZSH="/home4/shujun/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -115,13 +115,23 @@ alias la='ls -A'
 alias g='egrep -i'
 alias cls='clear'
 alias vi='vim'
-alias e='emacsclient'
-alias ee='emacsclient .'
 alias dir='dir --color=auto'
 alias vdir='vdir --color=auto'
 alias grep='grep --color=auto'
+alias g='grep --color=auto -rn'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
+alias e='emacsclient'
+alias ee='emacsclient .'
 export EDITOR=/usr/bin/vim
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# key bindings, like: HOME, END
+bindkey '\e[1~' beginning-of-line
+bindkey '\e[4~' end-of-line
+case $TERM in (xterm *)
+	bindkey '\e0H' beginning-of-line
+	bindkey '\e0F' end-of-line
+esac
+
+# Override the default width of the username column for command `w'
+export PROCPS_USERLEN=20
